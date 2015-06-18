@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\majian\company\ts_mgr\nineoldandroids\src\main\res"/><source path="D:\majian\company\ts_mgr\nineoldandroids\build\generated\res\rs\release"/><source path="D:\majian\company\ts_mgr\nineoldandroids\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="D:\majian\company\ts_mgr\nineoldandroids\src\release\res"/></dataSet><mergedItems/></merger>

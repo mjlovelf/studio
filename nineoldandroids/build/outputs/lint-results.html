@@ -1,0 +1,957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" type="text/css" href="lint-results_files/hololike.css" />
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body>
+<h1>Lint Report</h1>
+<div class="titleSeparator"></div>
+Check performed at Thu Jun 18 14:35:18 CST 2015.<br/>
+73 errors and 6 warnings found:<br/><br/>
+<table class="overview">
+<tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">5</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InlinedApi">InlinedApi: Using inlined constants on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">73</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#NewApi">NewApi: Calling new methods on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (10)</a>
+</td></tr></table>
+<br/>
+<a name="Correctness"></a>
+<div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
+</div>
+<a name="InlinedApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InlinedApi: Using inlined constants on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java">../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java</a>:44</span>: <span class="message">Field requires API level 11 (current min is 10): <code>android.R.attr#ordering</code></span><br /><pre class="errorlines">
+<span class="lineno">  41</span>  */
+<span class="lineno">  42</span> public class AnimatorInflater {
+<span class="lineno">  43</span>     private static final int[] AnimatorSet = new int[] {
+<span class="lineno">  44</span>         /* 0 */ <span class="errorspan">android.R.attr.ordering,</span>
+<span class="lineno">  45</span>     };
+<span class="lineno">  46</span>     private static final int AnimatorSet_ordering = 0;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java">../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java</a>:49</span>: <span class="message">Field requires API level 11 (current min is 10): <code>android.R.attr#propertyName</code></span><br /><pre class="errorlines">
+<span class="lineno">  46</span>     private static final int AnimatorSet_ordering = 0;
+<span class="lineno">  47</span> 
+<span class="lineno">  48</span>     private static final int[] PropertyAnimator = new int[] {
+<span class="lineno">  49</span>         /* 0 */ <span class="errorspan">android.R.attr.propertyName,</span>
+<span class="lineno">  50</span>     };
+<span class="lineno">  51</span>     private static final int PropertyAnimator_propertyName = 0;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java">../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java</a>:59</span>: <span class="message">Field requires API level 11 (current min is 10): <code>android.R.attr#valueFrom</code></span><br /><pre class="errorlines">
+<span class="lineno">  56</span>         /* 2 */ android.R.attr.startOffset,
+<span class="lineno">  57</span>         /* 3 */ android.R.attr.repeatCount,
+<span class="lineno">  58</span>         /* 4 */ android.R.attr.repeatMode,
+<span class="lineno">  59</span>         /* 5 */ <span class="errorspan">android.R.attr.valueFrom,</span>
+<span class="lineno">  60</span>         /* 6 */ android.R.attr.valueTo,
+<span class="lineno">  61</span>         /* 7 */ android.R.attr.valueType,
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java">../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java</a>:60</span>: <span class="message">Field requires API level 11 (current min is 10): <code>android.R.attr#valueTo</code></span><br /><pre class="errorlines">
+<span class="lineno">  57</span>         /* 3 */ android.R.attr.repeatCount,
+<span class="lineno">  58</span>         /* 4 */ android.R.attr.repeatMode,
+<span class="lineno">  59</span>         /* 5 */ android.R.attr.valueFrom,
+<span class="lineno">  60</span>         /* 6 */ <span class="errorspan">android.R.attr.valueTo,</span>
+<span class="lineno">  61</span>         /* 7 */ android.R.attr.valueType,
+<span class="lineno">  62</span>     };
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java">../../src/main/java/com/nineoldandroids/animation/AnimatorInflater.java</a>:61</span>: <span class="message">Field requires API level 11 (current min is 10): <code>android.R.attr#valueType</code></span><br /><pre class="errorlines">
+<span class="lineno">  58</span>         /* 4 */ android.R.attr.repeatMode,
+<span class="lineno">  59</span>         /* 5 */ android.R.attr.valueFrom,
+<span class="lineno">  60</span>         /* 6 */ android.R.attr.valueTo,
+<span class="lineno">  61</span>         /* 7 */ <span class="errorspan">android.R.attr.valueType,</span>
+<span class="lineno">  62</span>     };
+<span class="lineno">  63</span>     private static final int Animator_interpolator = 0;
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using inlined constants on older versions.</div>
+<div class="explanation">
+This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it's safe and can be suppressed or whether the code needs tbe guarded.<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "InlinedApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">NewApi: Calling new methods on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:181</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getAlpha</code></span><br /><pre class="errorlines">
+<span class="lineno"> 178</span> 
+<span class="lineno"> 179</span>     private static final class Honeycomb {
+<span class="lineno"> 180</span>         static float getAlpha(View view) {
+<span class="lineno"> 181</span>             return view.<span class="errorspan">getAlpha();</span>
+<span class="lineno"> 182</span>         }
+<span class="lineno"> 183</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:185</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setAlpha</code></span><br /><pre class="errorlines">
+<span class="lineno"> 182</span>         }
+<span class="lineno"> 183</span> 
+<span class="lineno"> 184</span>         static void setAlpha(View view, float alpha) {
+<span class="lineno"> 185</span>             view.<span class="errorspan">setAlpha(alpha);</span>
+<span class="lineno"> 186</span>         }
+<span class="lineno"> 187</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:189</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getPivotX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 186</span>         }
+<span class="lineno"> 187</span> 
+<span class="lineno"> 188</span>         static float getPivotX(View view) {
+<span class="lineno"> 189</span>             return view.<span class="errorspan">getPivotX();</span>
+<span class="lineno"> 190</span>         }
+<span class="lineno"> 191</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:193</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setPivotX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 190</span>         }
+<span class="lineno"> 191</span> 
+<span class="lineno"> 192</span>         static void setPivotX(View view, float pivotX) {
+<span class="lineno"> 193</span>             view.<span class="errorspan">setPivotX(pivotX);</span>
+<span class="lineno"> 194</span>         }
+<span class="lineno"> 195</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:197</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getPivotY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 194</span>         }
+<span class="lineno"> 195</span> 
+<span class="lineno"> 196</span>         static float getPivotY(View view) {
+<span class="lineno"> 197</span>             return view.<span class="errorspan">getPivotY();</span>
+<span class="lineno"> 198</span>         }
+<span class="lineno"> 199</span> 
+</pre>
+<button id="NewApiDivLink" onclick="reveal('NewApiDiv');" />+ 68 More Occurrences...</button>
+<div id="NewApiDiv" style="display: none">
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:201</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setPivotY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 198</span>         }
+<span class="lineno"> 199</span> 
+<span class="lineno"> 200</span>         static void setPivotY(View view, float pivotY) {
+<span class="lineno"> 201</span>             view.<span class="errorspan">setPivotY(pivotY);</span>
+<span class="lineno"> 202</span>         }
+<span class="lineno"> 203</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:205</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotation</code></span><br /><pre class="errorlines">
+<span class="lineno"> 202</span>         }
+<span class="lineno"> 203</span> 
+<span class="lineno"> 204</span>         static float getRotation(View view) {
+<span class="lineno"> 205</span>             return view.<span class="errorspan">getRotation();</span>
+<span class="lineno"> 206</span>         }
+<span class="lineno"> 207</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:209</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotation</code></span><br /><pre class="errorlines">
+<span class="lineno"> 206</span>         }
+<span class="lineno"> 207</span> 
+<span class="lineno"> 208</span>         static void setRotation(View view, float rotation) {
+<span class="lineno"> 209</span>             view.<span class="errorspan">setRotation(rotation);</span>
+<span class="lineno"> 210</span>         }
+<span class="lineno"> 211</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:213</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 210</span>         }
+<span class="lineno"> 211</span> 
+<span class="lineno"> 212</span>         static float getRotationX(View view) {
+<span class="lineno"> 213</span>             return view.<span class="errorspan">getRotationX();</span>
+<span class="lineno"> 214</span>         }
+<span class="lineno"> 215</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:217</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 214</span>         }
+<span class="lineno"> 215</span> 
+<span class="lineno"> 216</span>         static void setRotationX(View view, float rotationX) {
+<span class="lineno"> 217</span>             view.<span class="errorspan">setRotationX(rotationX);</span>
+<span class="lineno"> 218</span>         }
+<span class="lineno"> 219</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:221</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 218</span>         }
+<span class="lineno"> 219</span> 
+<span class="lineno"> 220</span>         static float getRotationY(View view) {
+<span class="lineno"> 221</span>             return view.<span class="errorspan">getRotationY();</span>
+<span class="lineno"> 222</span>         }
+<span class="lineno"> 223</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:225</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 222</span>         }
+<span class="lineno"> 223</span> 
+<span class="lineno"> 224</span>         static void setRotationY(View view, float rotationY) {
+<span class="lineno"> 225</span>             view.<span class="errorspan">setRotationY(rotationY);</span>
+<span class="lineno"> 226</span>         }
+<span class="lineno"> 227</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:229</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getScaleX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 226</span>         }
+<span class="lineno"> 227</span> 
+<span class="lineno"> 228</span>         static float getScaleX(View view) {
+<span class="lineno"> 229</span>             return view.<span class="errorspan">getScaleX();</span>
+<span class="lineno"> 230</span>         }
+<span class="lineno"> 231</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:233</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setScaleX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 230</span>         }
+<span class="lineno"> 231</span> 
+<span class="lineno"> 232</span>         static void setScaleX(View view, float scaleX) {
+<span class="lineno"> 233</span>             view.<span class="errorspan">setScaleX(scaleX);</span>
+<span class="lineno"> 234</span>         }
+<span class="lineno"> 235</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:237</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getScaleY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 234</span>         }
+<span class="lineno"> 235</span> 
+<span class="lineno"> 236</span>         static float getScaleY(View view) {
+<span class="lineno"> 237</span>             return view.<span class="errorspan">getScaleY();</span>
+<span class="lineno"> 238</span>         }
+<span class="lineno"> 239</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:241</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setScaleY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 238</span>         }
+<span class="lineno"> 239</span> 
+<span class="lineno"> 240</span>         static void setScaleY(View view, float scaleY) {
+<span class="lineno"> 241</span>             view.<span class="errorspan">setScaleY(scaleY);</span>
+<span class="lineno"> 242</span>         }
+<span class="lineno"> 243</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:249</span>: <span class="message">Call requires API level 14 (current min is 10): <code>android.view.View#setScrollX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 246</span>         }
+<span class="lineno"> 247</span> 
+<span class="lineno"> 248</span>         static void setScrollX(View view, int scrollX) {
+<span class="lineno"> 249</span>             view.<span class="errorspan">setScrollX(scrollX);</span>
+<span class="lineno"> 250</span>         }
+<span class="lineno"> 251</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:257</span>: <span class="message">Call requires API level 14 (current min is 10): <code>android.view.View#setScrollY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 254</span>         }
+<span class="lineno"> 255</span> 
+<span class="lineno"> 256</span>         static void setScrollY(View view, int scrollY) {
+<span class="lineno"> 257</span>             view.<span class="errorspan">setScrollY(scrollY);</span>
+<span class="lineno"> 258</span>         }
+<span class="lineno"> 259</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:261</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getTranslationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 258</span>         }
+<span class="lineno"> 259</span> 
+<span class="lineno"> 260</span>         static float getTranslationX(View view) {
+<span class="lineno"> 261</span>             return view.<span class="errorspan">getTranslationX();</span>
+<span class="lineno"> 262</span>         }
+<span class="lineno"> 263</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:265</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setTranslationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 262</span>         }
+<span class="lineno"> 263</span> 
+<span class="lineno"> 264</span>         static void setTranslationX(View view, float translationX) {
+<span class="lineno"> 265</span>             view.<span class="errorspan">setTranslationX(translationX);</span>
+<span class="lineno"> 266</span>         }
+<span class="lineno"> 267</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:269</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getTranslationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 266</span>         }
+<span class="lineno"> 267</span> 
+<span class="lineno"> 268</span>         static float getTranslationY(View view) {
+<span class="lineno"> 269</span>             return view.<span class="errorspan">getTranslationY();</span>
+<span class="lineno"> 270</span>         }
+<span class="lineno"> 271</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:273</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setTranslationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 270</span>         }
+<span class="lineno"> 271</span> 
+<span class="lineno"> 272</span>         static void setTranslationY(View view, float translationY) {
+<span class="lineno"> 273</span>             view.<span class="errorspan">setTranslationY(translationY);</span>
+<span class="lineno"> 274</span>         }
+<span class="lineno"> 275</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:277</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 274</span>         }
+<span class="lineno"> 275</span> 
+<span class="lineno"> 276</span>         static float getX(View view) {
+<span class="lineno"> 277</span>             return view.<span class="errorspan">getX();</span>
+<span class="lineno"> 278</span>         }
+<span class="lineno"> 279</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:281</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 278</span>         }
+<span class="lineno"> 279</span> 
+<span class="lineno"> 280</span>         static void setX(View view, float x) {
+<span class="lineno"> 281</span>             view.<span class="errorspan">setX(x);</span>
+<span class="lineno"> 282</span>         }
+<span class="lineno"> 283</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:285</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 282</span>         }
+<span class="lineno"> 283</span> 
+<span class="lineno"> 284</span>         static float getY(View view) {
+<span class="lineno"> 285</span>             return view.<span class="errorspan">getY();</span>
+<span class="lineno"> 286</span>         }
+<span class="lineno"> 287</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewHelper.java">../../src/main/java/com/nineoldandroids/view/ViewHelper.java</a>:289</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 286</span>         }
+<span class="lineno"> 287</span> 
+<span class="lineno"> 288</span>         static void setY(View view, float y) {
+<span class="lineno"> 289</span>             view.<span class="errorspan">setY(y);</span>
+<span class="lineno"> 290</span>         }
+<span class="lineno"> 291</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:541</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setTranslationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 538</span>             switch (propertyConstant) {
+<span class="lineno"> 539</span>                 case TRANSLATION_X:
+<span class="lineno"> 540</span>                     //info.mTranslationX = value;
+<span class="lineno"> 541</span>                     v.<span class="errorspan">setTranslationX(value);</span>
+<span class="lineno"> 542</span>                     break;
+<span class="lineno"> 543</span>                 case TRANSLATION_Y:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:545</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setTranslationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 542</span>                     break;
+<span class="lineno"> 543</span>                 case TRANSLATION_Y:
+<span class="lineno"> 544</span>                     //info.mTranslationY = value;
+<span class="lineno"> 545</span>                     v.<span class="errorspan">setTranslationY(value);</span>
+<span class="lineno"> 546</span>                     break;
+<span class="lineno"> 547</span>                 case ROTATION:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:549</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotation</code></span><br /><pre class="errorlines">
+<span class="lineno"> 546</span>                     break;
+<span class="lineno"> 547</span>                 case ROTATION:
+<span class="lineno"> 548</span>                     //info.mRotation = value;
+<span class="lineno"> 549</span>                     v.<span class="errorspan">setRotation(value);</span>
+<span class="lineno"> 550</span>                     break;
+<span class="lineno"> 551</span>                 case ROTATION_X:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:553</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 550</span>                     break;
+<span class="lineno"> 551</span>                 case ROTATION_X:
+<span class="lineno"> 552</span>                     //info.mRotationX = value;
+<span class="lineno"> 553</span>                     v.<span class="errorspan">setRotationX(value);</span>
+<span class="lineno"> 554</span>                     break;
+<span class="lineno"> 555</span>                 case ROTATION_Y:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:557</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setRotationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 554</span>                     break;
+<span class="lineno"> 555</span>                 case ROTATION_Y:
+<span class="lineno"> 556</span>                     //info.mRotationY = value;
+<span class="lineno"> 557</span>                     v.<span class="errorspan">setRotationY(value);</span>
+<span class="lineno"> 558</span>                     break;
+<span class="lineno"> 559</span>                 case SCALE_X:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:561</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setScaleX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 558</span>                     break;
+<span class="lineno"> 559</span>                 case SCALE_X:
+<span class="lineno"> 560</span>                     //info.mScaleX = value;
+<span class="lineno"> 561</span>                     v.<span class="errorspan">setScaleX(value);</span>
+<span class="lineno"> 562</span>                     break;
+<span class="lineno"> 563</span>                 case SCALE_Y:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:565</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setScaleY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 562</span>                     break;
+<span class="lineno"> 563</span>                 case SCALE_Y:
+<span class="lineno"> 564</span>                     //info.mScaleY = value;
+<span class="lineno"> 565</span>                     v.<span class="errorspan">setScaleY(value);</span>
+<span class="lineno"> 566</span>                     break;
+<span class="lineno"> 567</span>                 case X:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:569</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 566</span>                     break;
+<span class="lineno"> 567</span>                 case X:
+<span class="lineno"> 568</span>                     //info.mTranslationX = value - v.mLeft;
+<span class="lineno"> 569</span>                     v.<span class="errorspan">setX(value);</span>
+<span class="lineno"> 570</span>                     break;
+<span class="lineno"> 571</span>                 case Y:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:573</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 570</span>                     break;
+<span class="lineno"> 571</span>                 case Y:
+<span class="lineno"> 572</span>                     //info.mTranslationY = value - v.mTop;
+<span class="lineno"> 573</span>                     v.<span class="errorspan">setY(value);</span>
+<span class="lineno"> 574</span>                     break;
+<span class="lineno"> 575</span>                 case ALPHA:
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:577</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#setAlpha</code></span><br /><pre class="errorlines">
+<span class="lineno"> 574</span>                     break;
+<span class="lineno"> 575</span>                 case ALPHA:
+<span class="lineno"> 576</span>                     //info.mAlpha = value;
+<span class="lineno"> 577</span>                     v.<span class="errorspan">setAlpha(value);</span>
+<span class="lineno"> 578</span>                     break;
+<span class="lineno"> 579</span>             }
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:596</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getTranslationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 593</span>             switch (propertyConstant) {
+<span class="lineno"> 594</span>                 case TRANSLATION_X:
+<span class="lineno"> 595</span>                     //return info.mTranslationX;
+<span class="lineno"> 596</span>                     return v.<span class="errorspan">getTranslationX();</span>
+<span class="lineno"> 597</span>                 case TRANSLATION_Y:
+<span class="lineno"> 598</span>                     //return info.mTranslationY;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:599</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getTranslationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 596</span>                     return v.getTranslationX();
+<span class="lineno"> 597</span>                 case TRANSLATION_Y:
+<span class="lineno"> 598</span>                     //return info.mTranslationY;
+<span class="lineno"> 599</span>                     return v.<span class="errorspan">getTranslationY();</span>
+<span class="lineno"> 600</span>                 case ROTATION:
+<span class="lineno"> 601</span>                     //return info.mRotation;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:602</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotation</code></span><br /><pre class="errorlines">
+<span class="lineno"> 599</span>                     return v.getTranslationY();
+<span class="lineno"> 600</span>                 case ROTATION:
+<span class="lineno"> 601</span>                     //return info.mRotation;
+<span class="lineno"> 602</span>                     return v.<span class="errorspan">getRotation();</span>
+<span class="lineno"> 603</span>                 case ROTATION_X:
+<span class="lineno"> 604</span>                     //return info.mRotationX;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:605</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 602</span>                     return v.getRotation();
+<span class="lineno"> 603</span>                 case ROTATION_X:
+<span class="lineno"> 604</span>                     //return info.mRotationX;
+<span class="lineno"> 605</span>                     return v.<span class="errorspan">getRotationX();</span>
+<span class="lineno"> 606</span>                 case ROTATION_Y:
+<span class="lineno"> 607</span>                     //return info.mRotationY;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:608</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getRotationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 605</span>                     return v.getRotationX();
+<span class="lineno"> 606</span>                 case ROTATION_Y:
+<span class="lineno"> 607</span>                     //return info.mRotationY;
+<span class="lineno"> 608</span>                     return v.<span class="errorspan">getRotationY();</span>
+<span class="lineno"> 609</span>                 case SCALE_X:
+<span class="lineno"> 610</span>                     //return info.mScaleX;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:611</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getScaleX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 608</span>                     return v.getRotationY();
+<span class="lineno"> 609</span>                 case SCALE_X:
+<span class="lineno"> 610</span>                     //return info.mScaleX;
+<span class="lineno"> 611</span>                     return v.<span class="errorspan">getScaleX();</span>
+<span class="lineno"> 612</span>                 case SCALE_Y:
+<span class="lineno"> 613</span>                     //return info.mScaleY;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:614</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getScaleY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 611</span>                     return v.getScaleX();
+<span class="lineno"> 612</span>                 case SCALE_Y:
+<span class="lineno"> 613</span>                     //return info.mScaleY;
+<span class="lineno"> 614</span>                     return v.<span class="errorspan">getScaleY();</span>
+<span class="lineno"> 615</span>                 case X:
+<span class="lineno"> 616</span>                     //return v.mLeft + info.mTranslationX;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:617</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 614</span>                     return v.getScaleY();
+<span class="lineno"> 615</span>                 case X:
+<span class="lineno"> 616</span>                     //return v.mLeft + info.mTranslationX;
+<span class="lineno"> 617</span>                     return v.<span class="errorspan">getX();</span>
+<span class="lineno"> 618</span>                 case Y:
+<span class="lineno"> 619</span>                     //return v.mTop + info.mTranslationY;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:620</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 617</span>                     return v.getX();
+<span class="lineno"> 618</span>                 case Y:
+<span class="lineno"> 619</span>                     //return v.mTop + info.mTranslationY;
+<span class="lineno"> 620</span>                     return v.<span class="errorspan">getY();</span>
+<span class="lineno"> 621</span>                 case ALPHA:
+<span class="lineno"> 622</span>                     //return info.mAlpha;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorHC.java</a>:623</span>: <span class="message">Call requires API level 11 (current min is 10): <code>android.view.View#getAlpha</code></span><br /><pre class="errorlines">
+<span class="lineno"> 620</span>                     return v.getY();
+<span class="lineno"> 621</span>                 case ALPHA:
+<span class="lineno"> 622</span>                     //return info.mAlpha;
+<span class="lineno"> 623</span>                     return v.<span class="errorspan">getAlpha();</span>
+<span class="lineno"> 624</span>             }
+<span class="lineno"> 625</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:22</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.View#animate</code></span><br /><pre class="errorlines">
+<span class="lineno">  19</span>     private final WeakReference&lt;android.view.ViewPropertyAnimator> mNative;
+<span class="lineno">  20</span> 
+<span class="lineno">  21</span>     ViewPropertyAnimatorICS(View view) {
+<span class="lineno">  22</span>         mNative = new WeakReference&lt;android.view.ViewPropertyAnimator>(view.<span class="errorspan">animate());</span>
+<span class="lineno">  23</span>     }
+<span class="lineno">  24</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:29</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#setDuration</code></span><br /><pre class="errorlines">
+<span class="lineno">  26</span>     public ViewPropertyAnimator setDuration(long duration) {
+<span class="lineno">  27</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno">  28</span>         if (n != null) {
+<span class="lineno">  29</span>             n.<span class="errorspan">setDuration(duration);</span>
+<span class="lineno">  30</span>         }
+<span class="lineno">  31</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:47</span>: <span class="message">Call requires API level 14 (current min is 10): <code>android.view.ViewPropertyAnimator#setStartDelay</code></span><br /><pre class="errorlines">
+<span class="lineno">  44</span>     public ViewPropertyAnimator setStartDelay(long startDelay) {
+<span class="lineno">  45</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno">  46</span>         if (n != null) {
+<span class="lineno">  47</span>             n.<span class="errorspan">setStartDelay(startDelay);</span>
+<span class="lineno">  48</span>         }
+<span class="lineno">  49</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:65</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#setInterpolator</code></span><br /><pre class="errorlines">
+<span class="lineno">  62</span>     public ViewPropertyAnimator setInterpolator(Interpolator interpolator) {
+<span class="lineno">  63</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno">  64</span>         if (n != null) {
+<span class="lineno">  65</span>             n.<span class="errorspan">setInterpolator(interpolator);</span>
+<span class="lineno">  66</span>         }
+<span class="lineno">  67</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:75</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#setListener</code></span><br /><pre class="errorlines">
+<span class="lineno">  72</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno">  73</span>         if (n != null) {
+<span class="lineno">  74</span>             if (listener == null) {
+<span class="lineno">  75</span>                 n.<span class="errorspan">setListener(null);</span>
+<span class="lineno">  76</span>             } else {
+<span class="lineno">  77</span>                 n.setListener(new android.animation.Animator.AnimatorListener() {
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:77</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#setListener</code></span><br /><pre class="errorlines">
+<span class="lineno">  74</span>             if (listener == null) {
+<span class="lineno">  75</span>                 n.setListener(null);
+<span class="lineno">  76</span>             } else {
+<span class="lineno">  77</span>                 n.<span class="errorspan">setListener(new android.animation.Animator.AnimatorListener() {</span>
+<span class="lineno">  78</span>                     @Override
+<span class="lineno">  79</span>                     public void onAnimationStart(android.animation.Animator animation) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:77</span>: <span class="message">Class requires API level 11 (current min is 10): <code>android.animation.Animator.AnimatorListener</code></span><br /><pre class="errorlines">
+<span class="lineno">  74</span>             if (listener == null) {
+<span class="lineno">  75</span>                 n.setListener(null);
+<span class="lineno">  76</span>             } else {
+<span class="lineno">  77</span>                 n.setListener(new android.animation.Animator.<span class="errorspan">AnimatorListener() {</span>
+<span class="lineno">  78</span>                     @Override
+<span class="lineno">  79</span>                     public void onAnimationStart(android.animation.Animator animation) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:123</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#x</code></span><br /><pre class="errorlines">
+<span class="lineno"> 120</span>     public ViewPropertyAnimator x(float value) {
+<span class="lineno"> 121</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 122</span>         if (n != null) {
+<span class="lineno"> 123</span>             n.<span class="errorspan">x(value);</span>
+<span class="lineno"> 124</span>         }
+<span class="lineno"> 125</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:132</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#xBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 129</span>     public ViewPropertyAnimator xBy(float value) {
+<span class="lineno"> 130</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 131</span>         if (n != null) {
+<span class="lineno"> 132</span>             n.<span class="errorspan">xBy(value);</span>
+<span class="lineno"> 133</span>         }
+<span class="lineno"> 134</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:141</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#y</code></span><br /><pre class="errorlines">
+<span class="lineno"> 138</span>     public ViewPropertyAnimator y(float value) {
+<span class="lineno"> 139</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 140</span>         if (n != null) {
+<span class="lineno"> 141</span>             n.<span class="errorspan">y(value);</span>
+<span class="lineno"> 142</span>         }
+<span class="lineno"> 143</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:150</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#yBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 147</span>     public ViewPropertyAnimator yBy(float value) {
+<span class="lineno"> 148</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 149</span>         if (n != null) {
+<span class="lineno"> 150</span>             n.<span class="errorspan">yBy(value);</span>
+<span class="lineno"> 151</span>         }
+<span class="lineno"> 152</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:159</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotation</code></span><br /><pre class="errorlines">
+<span class="lineno"> 156</span>     public ViewPropertyAnimator rotation(float value) {
+<span class="lineno"> 157</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 158</span>         if (n != null) {
+<span class="lineno"> 159</span>             n.<span class="errorspan">rotation(value);</span>
+<span class="lineno"> 160</span>         }
+<span class="lineno"> 161</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:168</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotationBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 165</span>     public ViewPropertyAnimator rotationBy(float value) {
+<span class="lineno"> 166</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 167</span>         if (n != null) {
+<span class="lineno"> 168</span>             n.<span class="errorspan">rotationBy(value);</span>
+<span class="lineno"> 169</span>         }
+<span class="lineno"> 170</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:177</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 174</span>     public ViewPropertyAnimator rotationX(float value) {
+<span class="lineno"> 175</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 176</span>         if (n != null) {
+<span class="lineno"> 177</span>             n.<span class="errorspan">rotationX(value);</span>
+<span class="lineno"> 178</span>         }
+<span class="lineno"> 179</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:186</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotationXBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 183</span>     public ViewPropertyAnimator rotationXBy(float value) {
+<span class="lineno"> 184</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 185</span>         if (n != null) {
+<span class="lineno"> 186</span>             n.<span class="errorspan">rotationXBy(value);</span>
+<span class="lineno"> 187</span>         }
+<span class="lineno"> 188</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:195</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 192</span>     public ViewPropertyAnimator rotationY(float value) {
+<span class="lineno"> 193</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 194</span>         if (n != null) {
+<span class="lineno"> 195</span>             n.<span class="errorspan">rotationY(value);</span>
+<span class="lineno"> 196</span>         }
+<span class="lineno"> 197</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:204</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#rotationYBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 201</span>     public ViewPropertyAnimator rotationYBy(float value) {
+<span class="lineno"> 202</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 203</span>         if (n != null) {
+<span class="lineno"> 204</span>             n.<span class="errorspan">rotationYBy(value);</span>
+<span class="lineno"> 205</span>         }
+<span class="lineno"> 206</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:213</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#translationX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 210</span>     public ViewPropertyAnimator translationX(float value) {
+<span class="lineno"> 211</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 212</span>         if (n != null) {
+<span class="lineno"> 213</span>             n.<span class="errorspan">translationX(value);</span>
+<span class="lineno"> 214</span>         }
+<span class="lineno"> 215</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:222</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#translationXBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 219</span>     public ViewPropertyAnimator translationXBy(float value) {
+<span class="lineno"> 220</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 221</span>         if (n != null) {
+<span class="lineno"> 222</span>             n.<span class="errorspan">translationXBy(value);</span>
+<span class="lineno"> 223</span>         }
+<span class="lineno"> 224</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:231</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#translationY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 228</span>     public ViewPropertyAnimator translationY(float value) {
+<span class="lineno"> 229</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 230</span>         if (n != null) {
+<span class="lineno"> 231</span>             n.<span class="errorspan">translationY(value);</span>
+<span class="lineno"> 232</span>         }
+<span class="lineno"> 233</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:240</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#translationYBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 237</span>     public ViewPropertyAnimator translationYBy(float value) {
+<span class="lineno"> 238</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 239</span>         if (n != null) {
+<span class="lineno"> 240</span>             n.<span class="errorspan">translationYBy(value);</span>
+<span class="lineno"> 241</span>         }
+<span class="lineno"> 242</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:249</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#scaleX</code></span><br /><pre class="errorlines">
+<span class="lineno"> 246</span>     public ViewPropertyAnimator scaleX(float value) {
+<span class="lineno"> 247</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 248</span>         if (n != null) {
+<span class="lineno"> 249</span>             n.<span class="errorspan">scaleX(value);</span>
+<span class="lineno"> 250</span>         }
+<span class="lineno"> 251</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:258</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#scaleXBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 255</span>     public ViewPropertyAnimator scaleXBy(float value) {
+<span class="lineno"> 256</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 257</span>         if (n != null) {
+<span class="lineno"> 258</span>             n.<span class="errorspan">scaleXBy(value);</span>
+<span class="lineno"> 259</span>         }
+<span class="lineno"> 260</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:267</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#scaleY</code></span><br /><pre class="errorlines">
+<span class="lineno"> 264</span>     public ViewPropertyAnimator scaleY(float value) {
+<span class="lineno"> 265</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 266</span>         if (n != null) {
+<span class="lineno"> 267</span>             n.<span class="errorspan">scaleY(value);</span>
+<span class="lineno"> 268</span>         }
+<span class="lineno"> 269</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:276</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#scaleYBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 273</span>     public ViewPropertyAnimator scaleYBy(float value) {
+<span class="lineno"> 274</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 275</span>         if (n != null) {
+<span class="lineno"> 276</span>             n.<span class="errorspan">scaleYBy(value);</span>
+<span class="lineno"> 277</span>         }
+<span class="lineno"> 278</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:285</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#alpha</code></span><br /><pre class="errorlines">
+<span class="lineno"> 282</span>     public ViewPropertyAnimator alpha(float value) {
+<span class="lineno"> 283</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 284</span>         if (n != null) {
+<span class="lineno"> 285</span>             n.<span class="errorspan">alpha(value);</span>
+<span class="lineno"> 286</span>         }
+<span class="lineno"> 287</span>         return this;
+</pre>
+<span class="location"><a href="../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java">../../src/main/java/com/nineoldandroids/view/ViewPropertyAnimatorICS.java</a>:294</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.view.ViewPropertyAnimator#alphaBy</code></span><br /><pre class="errorlines">
+<span class="lineno"> 291</span>     public ViewPropertyAnimator alphaBy(float value) {
+<span class="lineno"> 292</span>         android.view.ViewPropertyAnimator n = mNative.get();
+<span class="lineno"> 293</span>         if (n != null) {
+<span class="lineno"> 294</span>             n.<span class="errorspan">alphaBy(value);</span>
+<span class="lineno"> 295</span>         }
+<span class="lineno"> 296</span>         return this;
+</pre>
+</div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Calling new methods on older versions.</div>
+<div class="explanation">
+This check scans through all the Android API calls in the application and warns about any calls that are not available on <b>all</b> versions targeted by this application (according to its minimum SDK attribute in the manifest).<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+<br/>
+If you are deliberately setting <code>android:</code> attributes in style definitions, make sure you place this in a <code>values-vNN</code> folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.<br/>
+<br/>
+Similarly, you can use tools:targetApi="11" in an XML file to indicate that the element will only be inflated in an adequate context.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDependency"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:26</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 21.0.0 is available: 21.0.3</span><br /><pre class="errorlines">
+<span class="lineno">  23</span> 
+<span class="lineno">  24</span> dependencies {
+<span class="lineno">  25</span>     compile fileTree(dir: 'libs', include: ['*.jar'])
+<span class="lineno">  26</span>     <span class="errorspan">compile 'com.android.support:appcompat-v7:21.0.0'</span>
+<span class="lineno">  27</span> }
+<span class="lineno">  28</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Obsolete Gradle Dependency.</div>
+<div class="explanation">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="MissingIssues"></a>
+<div class="category">Disabled Checks<div class="categorySeparator"></div>
+</div>
+The following issues were not run by lint, either because the check is not enabled by default, or because it was disabled with a command line flag or via one or more lint.xml configuration files in the project directories.
+<br/><br/>
+<a name="BackButton"></a>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Back button.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="EasterEgg"></a>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains easter egg.</div>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="FieldGetter"></a>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using getter instead of field.</div>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconExpectedSize"></a>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Icon has incorrect size.</div>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NegativeMargin"></a>
+<div class="issue">
+<div class="id">NegativeMargin<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Negative Margins.</div>
+<div class="explanation">
+Margin values should be positive. Negative values are generally a sign that you are making assumptions about views surrounding the current one, or may be tempted to turn off child clipping to allow a view to escape its parent. Turning off child clipping to do this not only leads to poor graphical performance, it also results in wrong touch event handling since touch events are based strictly on a chain of parent-rect hit tests. Finally, making assumptions about the size of strings can lead to localization problems.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NegativeMargin" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewerVersionAvailable"></a>
+<div class="issue">
+<div class="id">NewerVersionAvailable<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Newer Library Versions Available.</div>
+<div class="explanation">
+This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project.<br/>
+This is similar to the <code>GradleDependency</code> check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also <b>much</b> slower.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewerVersionAvailable" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SelectableText"></a>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 7 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Dynamic text should probably be selectable.</div>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="StopShip"></a>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 10 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains <code>STOPSHIP</code> marker.</div>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TypographyQuotes"></a>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Typography</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Straight quotes can be replaced with curvy quotes.</div>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)
+</div>
+<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedIds"></a>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 1 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unused id.</div>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="SuppressInfo"></a>
+<div class="category">Suppressing Warnings and Errors<div class="categorySeparator"></div>
+</div>
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a @SuppressLint annotation in the Java code<br/>
+2. With a tools:ignore attribute in the XML file<br/>
+3. With a lint.xml configuration file in the project<br/>
+4. With a lint.xml configuration file passed to lint via the --config flag<br/>
+5. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a @SuppressLint("id") annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as "UnusedResources" or {"UnusedResources","UnusedIds"}, or it can be "all" to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a tools:ignore="id" attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the xmlns:android declaration:<br/>
+* xmlns:tools="http://schemas.android.com/tools"<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named lint.xml and place it at the root directory of the project in which it applies. (If you use the Eclipse plugin's Lint view, you can suppress errors there via the toolbar and Eclipse will create the lint.xml file for you.).<br/>
+<br/>
+The format of the lint.xml file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+    &lt;!-- Disable this given check in this project --><br/>
+    &lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+    &lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+    &lt;issue id="ObsoleteLayoutParam"><br/>
+        &lt;ignore path="res/layout/activation.xml" /><br/>
+        &lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+    &lt;issue id="UselessLeaf"><br/>
+        &lt;ignore path="res/layout/main.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+    &lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+"lint --ignore UnusedResources,UselessLeaf /my/project/path"<br/>
+
+
+</body>
+</html>
