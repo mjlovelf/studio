@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/BasicNetwork.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/ByteArrayPool.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/CacheDispatcher.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/DefaultRetryPolicy.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/DiskBasedCache.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/ExecutorDelivery.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/HttpClientStack.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/HttpHeaderParser.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/HttpStack.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/HurlStack.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/Network.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/NetworkDispatcher.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/NetworkResponse.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/PoolingByteArrayOutputStream.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/Request.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/RequestQueue.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/Response.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/ResponseDelivery.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/RetryPolicy.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/Volley.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/cache/Cache.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/AuthFailureError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/NetworkError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/NoConnectionError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/ServerError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/TimeoutError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/error/VolleyError.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/network/log/VolleyLog.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/util/MD5Utils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/http/majian/com/volleyutil/util/NetWorkDetectionUtils.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
